@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}));
 
 
-app.use('/api/country',countryRoutes);
+app.use('/api/states',countryRoutes);
 
 //errorFindingMiddleware
 app.use(notFound);

@@ -1,10 +1,11 @@
 import express from 'express'
-import {getAllCountry, addNewCountry} from '../controllers/countryController.js'
+import {addNewStates,getAllByCountry,updateStateById,deleteStateById} from '../controllers/statesController.js'
 
 const router = express.Router();
 
-router.get('/', getAllCountry);
-router.post('/add', addNewCountry);
-
+router.get('/', getAllByCountry);
+router.post('/add', addNewStates);
+router.put('/:id',updateStateById);
+router.delete('/:id',deleteStateById);
 
 export default router;
